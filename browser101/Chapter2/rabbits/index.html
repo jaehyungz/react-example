@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll</title>
+    <style>
+      body {
+        background: black;
+        text-align: center;
+      }
+      button {
+        dispay: inline-block;
+        background: coral;
+        border: 0;
+      }
+      div {
+        width: 150px;
+        height: 150px;
+        margin: 10px auto;
+      }
+      .carrot {
+        background: url(./img/carrot.png) no-repeat;
+        background-size: contain;
+      }
+      .rabbit {
+        background: url(./img/rabbit.png) no-repeat;
+        background-size: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="test()">find a rabbit ⭐️</button>
+    <div class="carrot"></div>
+    <div class="carrot"></div>
+    <div class="carrot"></div>
+    <div class="carrot"></div>
+    <div class="carrot"></div>
+    <div class="carrot"></div>
+    <div class="carrot"></div>
+    <div class="carrot"></div>
+    <div class="rabbit"></div>
+    <div class="carrot"></div>
+    <div class="carrot"></div>
+    <div class="carrot"></div>
+    <div class="carrot"></div>
+    <div class="carrot"></div>
+    <div class="carrot"></div>
+    <div class="carrot"></div>
+
+    <script>
+      const rabbit = document.querySelector(".rabbit");
+      const button = document.querySelector("button");
+
+      document.addEventListener("click", () => {
+        rabbit.scrollIntoView({ behavior: "smooth" });
+      });
+    </script>
+  </body>
+</html>

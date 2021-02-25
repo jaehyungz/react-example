@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .yellow {
+        width: 600px;
+        height: 600px;
+        margin: 0 auto;
+        background-color: yellow;
+      }
+      .purple {
+        width: 300px;
+        height: 300px;
+        transform: translate(50%, 50%);
+        text-align: center;
+        line-height: 300px;
+        background-color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="yellow">
+      <div class="purple">
+        <button>click me</button>
+      </div>
+    </div>
+    <script>
+      const yellow = document.querySelector(".yellow");
+      const purple = document.querySelector(".purple");
+      const button = document.querySelector("button");
+
+      yellow.addEventListener("click", (e) => {
+        if (e.target !== e.currentTarget) {
+          //버블링방지
+          return;
+        }
+        console.log(`yellow:${e.currentTarget} ${e.target}`);
+      });
+      purple.addEventListener("click", (e) => {
+        if (e.target !== e.currentTarget) {
+          //버블링방지
+          return;
+        }
+        console.log(`purple:${e.currentTarget} ${e.target}`);
+      });
+      button.addEventListener("click", (e) => {
+        console.log(`button:${e.currentTarget} ${e.target}`);
+      });
+      button.addEventListener("click", (e) => {
+        console.log(`button2:${e.currentTarget} ${e.target}`);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <img src="" alt="" />
+      <hi id="brand">Dream Coding</hi>
+      <h3>Don't forget to code your dream</h3>
+    </section>
+    <span>hello world!</span>
+    <script>
+      const section = document.querySelector("section");
+      const h2 = document.createElement("h2");
+      h2.setAttribute("class", "title");
+      h2.textContent = "this is a title";
+      const h3 = document.querySelector("h3");
+      section.insertBefore(h2, h3);
+    </script>
+  </body>
+</html>
